@@ -3,7 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Calculation = (props) => {
-  const { consumedTime } = props;
+  const { consumedTime, time } = props;
   //console.log(consumedTime);
   let initialValue = 0;
   const totalSecond = consumedTime.reduce(
@@ -31,7 +31,12 @@ const Calculation = (props) => {
           <p className="textSize">Consumed Time</p>
         </div>
         <div className="col-7">
-          <input type="text" value={totalSecond + "second"} readOnly />
+          <input
+            style={{ fontSize: "12px" }}
+            type="text"
+            value={totalSecond + "second"}
+            readOnly
+          />
         </div>
       </div>
       <div className="row mt-2">
@@ -39,7 +44,12 @@ const Calculation = (props) => {
           <p className="textSize">Break Time</p>
         </div>
         <div className="col-7">
-          <input type="text" value={props.time + "second"} readOnly />
+          <input
+            style={{ fontSize: "12px" }}
+            type="text"
+            value={time + "second"}
+            readOnly
+          />
         </div>
       </div>
       <div className="d-grid gap-2 mt-3">

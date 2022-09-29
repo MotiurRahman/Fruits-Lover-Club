@@ -1,4 +1,4 @@
-import React, { Profiler, useState } from "react";
+import React, { Profiler, useEffect, useState } from "react";
 import AddABreak from "../AddABreak/AddABreak";
 import Calculation from "../Calculation/Calculation";
 import Profile from "../Profile/Profile";
@@ -7,7 +7,16 @@ const Sidebar = (porps) => {
   const [time, setTime] = useState(0);
   const addABreak = (time) => {
     setTime(time);
+    localStorage.setItem("Time", time);
   };
+
+  useEffect(() => {
+    const storeData = localStorage.getItem("Time");
+    if (storeData) {
+      setTime(storeData);
+    }
+    // console.log(storeData);
+  }, []);
 
   return (
     <div className="rightBar">
