@@ -1,4 +1,6 @@
 import React from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Calculation = (props) => {
   const { consumedTime } = props;
@@ -8,6 +10,19 @@ const Calculation = (props) => {
     (previousValue, currentValue) => previousValue + parseInt(currentValue),
     initialValue
   );
+
+  const notify = () => {
+    toast("🦄 Congratulation you have done your activity!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+    console.log("toast");
+  };
   return (
     <div className="mt-5">
       <h5>Consumed Details</h5>
@@ -16,7 +31,7 @@ const Calculation = (props) => {
           <p className="textSize">Consumed Time</p>
         </div>
         <div className="col-7">
-          <input type="text" value={totalSecond + "second"} />
+          <input type="text" value={totalSecond + "second"} readOnly />
         </div>
       </div>
       <div className="row mt-2">
@@ -24,13 +39,14 @@ const Calculation = (props) => {
           <p className="textSize">Break Time</p>
         </div>
         <div className="col-7">
-          <input type="text" value={props.time + "second"} />
+          <input type="text" value={props.time + "second"} readOnly />
         </div>
       </div>
       <div className="d-grid gap-2 mt-3">
-        <button className="btn btn-primary" type="button">
-          Activity Completed
+        <button className="btn btn-primary" type="button" onClick={notify}>
+          Activity Completed!
         </button>
+        <ToastContainer />
       </div>
     </div>
   );
