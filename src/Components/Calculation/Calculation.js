@@ -9,7 +9,7 @@ const Calculation = (props) => {
           <p className="textSize">Conssumed Time</p>
         </div>
         <div className="col-7">
-          <input type="text" />
+          <input type="text" value={props.consumedTime} />
         </div>
       </div>
       <div className="row">
