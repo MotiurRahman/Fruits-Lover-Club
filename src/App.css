@@ -6,6 +6,11 @@
   font-size: 12px;
 }
 
+.rightBar {
+  position: sticky;
+  top: 0;
+}
+
 .pointer {
   cursor: pointer;
 }

@@ -6,13 +6,11 @@ import Sidebar from "./Components/Sidebar/Sidebar";
 import { useState } from "react";
 
 function App() {
-  const [conTime, setConsumed_time] = useState(0);
+  const [conTime, setConsumed_time] = useState([]);
 
-  let totalTime = 0;
   const consumedTime = (consumedTime) => {
-    totalTime = totalTime + parseInt(consumedTime);
-    console.log(totalTime);
-    setConsumed_time(totalTime);
+    let newArray = [...conTime, consumedTime];
+    setConsumed_time(newArray);
   };
 
   return (

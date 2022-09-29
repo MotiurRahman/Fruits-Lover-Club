@@ -1,6 +1,13 @@
 import React from "react";
 
 const Calculation = (props) => {
+  const { consumedTime } = props;
+  //console.log(consumedTime);
+  let initialValue = 0;
+  const totalSecond = consumedTime.reduce(
+    (previousValue, currentValue) => previousValue + parseInt(currentValue),
+    initialValue
+  );
   return (
     <div className="mt-5">
       <h5>Consumed Details</h5>
@@ -9,7 +16,7 @@ const Calculation = (props) => {
           <p className="textSize">Conssumed Time</p>
         </div>
         <div className="col-7">
-          <input type="text" value={props.consumedTime} />
+          <input type="text" value={totalSecond} />
         </div>
       </div>
       <div className="row">
