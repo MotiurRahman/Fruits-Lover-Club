@@ -10,7 +10,7 @@ const Sidebar = (porps) => {
   };
 
   return (
-    <div className="mt-5 rightBar">
+    <div className="rightBar">
       <Profile></Profile>
       <AddABreak addABreak={addABreak}></AddABreak>
       <Calculation time={time} consumedTime={porps.conTime}></Calculation>

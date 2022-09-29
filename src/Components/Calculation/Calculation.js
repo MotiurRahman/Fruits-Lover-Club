@@ -19,7 +19,7 @@ const Calculation = (props) => {
           <input type="text" value={totalSecond} />
         </div>
       </div>
-      <div className="row">
+      <div className="row mt-2">
         <div className="col-5">
           <p className="textSize">Break Time</p>
         </div>

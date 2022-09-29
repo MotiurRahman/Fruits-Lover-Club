@@ -15,12 +15,15 @@ function App() {
 
   return (
     <div className="container">
+      <Header></Header>
       <div className="row">
-        <div className="col-lg-10 col-sm-6 col-12">
-          <Header></Header>
+        <div className="col-lg-2 col-12 my-5 d-lg-none d-block">
+          <Sidebar conTime={conTime}></Sidebar>
+        </div>
+        <div className="col-lg-10 col-12">
           <ConsumedFruits consumedTime={consumedTime}></ConsumedFruits>
         </div>
-        <div className="col-lg-2 col-sm-6 col-12">
+        <div className="col-lg-2 col-12 d-none d-lg-block">
           <Sidebar conTime={conTime}></Sidebar>
         </div>
       </div>
