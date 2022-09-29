@@ -1,6 +1,7 @@
 import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import "./Calculation.css";
 
 const Calculation = (props) => {
   const { consumedTime, time } = props;
@@ -52,8 +53,12 @@ const Calculation = (props) => {
           />
         </div>
       </div>
-      <div className="d-grid gap-2 mt-3">
-        <button className="btn btn-primary" type="button" onClick={notify}>
+      <div className="mt-3">
+        <button
+          className="btn btn-primary activityCompletedBtn"
+          type="button"
+          onClick={notify}
+        >
           Activity Completed!
         </button>
         <ToastContainer />
