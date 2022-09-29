@@ -1,6 +1,6 @@
 import React from "react";
 
-const Calculation = () => {
+const Calculation = (props) => {
   return (
     <div className="mt-5">
       <h5>Consumed Details</h5>
@@ -17,7 +17,7 @@ const Calculation = () => {
           <p className="textSize">Break Time</p>
         </div>
         <div className="col-7">
-          <input type="text" />
+          <input type="text" value={props.time} />
         </div>
       </div>
       <div className="d-grid gap-2 mt-3">

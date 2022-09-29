@@ -12,7 +12,7 @@ const AddABreak = (props) => {
         <div onClick={() => addABreak(20)} className="d-flex pointer">
           <span>20</span> <span>s</span>
         </div>
-        <div onClick={() => addABreak(20)} className="d-flex pointer">
+        <div onClick={() => addABreak(30)} className="d-flex pointer">
           <span>30</span> <span>s</span>
         </div>
         <div onClick={() => addABreak(40)} className="d-flex pointer">
