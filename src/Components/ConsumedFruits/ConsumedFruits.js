@@ -10,7 +10,7 @@ const ConsumedFruits = (props) => {
   }, []);
   return (
     <div>
-      <h4>Select today consumed fruits.</h4>
+      <h4>Select today's consumed fruits.</h4>
       <div className="row row-cols-1 row-cols-lg-3">
         {fruits.map((fruit) => (
           <Fruit

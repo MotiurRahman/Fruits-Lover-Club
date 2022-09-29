@@ -13,10 +13,10 @@ const Calculation = (props) => {
       <h5>Consumed Details</h5>
       <div className="row">
         <div className="col-5">
-          <p className="textSize">Conssumed Time</p>
+          <p className="textSize">Consumed Time</p>
         </div>
         <div className="col-7">
-          <input type="text" value={totalSecond} />
+          <input type="text" value={totalSecond + "second"} />
         </div>
       </div>
       <div className="row mt-2">
@@ -24,7 +24,7 @@ const Calculation = (props) => {
           <p className="textSize">Break Time</p>
         </div>
         <div className="col-7">
-          <input type="text" value={props.time} />
+          <input type="text" value={props.time + "second"} />
         </div>
       </div>
       <div className="d-grid gap-2 mt-3">
