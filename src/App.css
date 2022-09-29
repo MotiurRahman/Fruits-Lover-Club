@@ -6,6 +6,10 @@
   font-size: 12px;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

@@ -4,10 +4,13 @@ import Calculation from "../Calculation/Calculation";
 import Profile from "../Profile/Profile";
 
 const Sidebar = () => {
+  const addABreak = (time) => {
+    console.log(time);
+  };
   return (
     <div className="mt-5">
       <Profile></Profile>
-      <AddABreak></AddABreak>
+      <AddABreak addABreak={addABreak}></AddABreak>
       <Calculation></Calculation>
     </div>
   );
